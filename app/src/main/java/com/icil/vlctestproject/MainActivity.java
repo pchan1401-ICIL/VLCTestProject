@@ -4,7 +4,6 @@ import android.content.res.Configuration;
 import android.graphics.SurfaceTexture;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.view.TextureView;
@@ -30,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements IVLCVout.Callback
     private MediaPlayer mMediaPlayer = null;
 
     public String mFilePath = "/sdcard/practice/video.mp4";
+    //파일위치는 /sdcard/practice/video.mp4 다음과 같이 지정한다.
 
     private int mVideoWidth;
     private int mVideoHeight;
@@ -38,8 +38,6 @@ public class MainActivity extends AppCompatActivity implements IVLCVout.Callback
     private SeekBar mSeekBar;
     private TextureView mTexture;
 
-
-    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
